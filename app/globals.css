@@ -204,3 +204,11 @@ a:focus-visible, button:focus-visible {
   outline: 2px solid #00AAAA;
   outline-offset: 3px;
 }
+
+/* ── Page Hero (used on inner pages) ─────────────────────────────── */
+.page-hero {
+  background: #001e3c;
+  padding: 8rem 2rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
