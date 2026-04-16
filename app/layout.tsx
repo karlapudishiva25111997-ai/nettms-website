@@ -1,3 +1,5 @@
+import Script from "next/script"
+
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -37,6 +39,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>{children}</main>
         <Footer />
+              <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-3C2EQNSKVR"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-3C2EQNSKVR');
+        `}
+      </Script>
       </body>
     </html>
   );
