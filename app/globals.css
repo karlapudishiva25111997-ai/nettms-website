@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ── v6 Blue Palette — Readability Enhanced ──────────────────────── */
+:root {
+  --c-navy-deep:    #001e3c;
+  --c-navy-mid:     #002d5a;
+  --c-navy-light:   #003366;
+  --c-teal-dark:    #005a5a;
+  --c-teal-mid:     #006666;
+  --c-teal-accent:  #00AAAA;
+  --c-teal-bright:  #00cccc;
+  --c-bg-light:     #E8F4F4;
+  --c-bg-page:      #f5fafa;
+  --c-white:        #FFFFFF;
+  --c-body-text:    #1e3040;
+  --c-muted-text:   #3a5468;
+  --c-hint-text:    #5a7a8a;
+  --c-on-dark-primary:  rgba(255,255,255,0.95);
+  --c-on-dark-second:   rgba(255,255,255,0.75);
+  --c-on-dark-muted:    rgba(255,255,255,0.55);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 16px;
+  color: var(--c-body-text);
+  background: var(--c-white);
+  line-height: 1.8;
+}
+
+/* ── Headings ─────────────────────────────────────────────────────── */
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--c-navy-deep);
+  line-height: 1.15;
+}
+p { color: var(--c-body-text); line-height: 1.85; }
+
+/* ── Eyebrow ──────────────────────────────────────────────────────── */
+.eyebrow {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-teal-accent);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 0.9rem 2rem;
+  background: var(--c-teal-accent); color: #001e3c;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; transition: all 0.25s ease;
+  border: none; cursor: pointer; border-radius: 2px;
+  white-space: nowrap;
+}
+.btn-primary:hover { background: var(--c-teal-bright); transform: translateY(-2px); }
+
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 0.9rem 2rem;
+  background: transparent; color: #fff;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; border: 1.5px solid rgba(0,170,170,0.6);
+  transition: all 0.25s ease; cursor: pointer; border-radius: 2px;
+  white-space: nowrap;
+}
+.btn-outline:hover { background: rgba(0,170,170,0.15); border-color: var(--c-teal-accent); }
+
+.btn-outline-dark {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 0.9rem 2rem;
+  background: transparent; color: var(--c-navy-deep);
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; border: 1.5px solid var(--c-teal-mid);
+  transition: all 0.25s ease; cursor: pointer; border-radius: 2px;
+  white-space: nowrap;
+}
+.btn-outline-dark:hover { background: var(--c-teal-mid); color: #fff; }
+
+/* ── Grid background ─────────────────────────────────────────────── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0,170,170,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,170,170,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* ── Page Hero ───────────────────────────────────────────────────── */
+.page-hero {
+  background: #001e3c;
+  padding: 8rem 2rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   GLOBAL MOBILE RESPONSIVE UTILITIES
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── 2-col grids → 1 col on mobile ───────────────────────────────── */
+@media (max-width: 768px) {
+  .page-hero { padding: 6rem 1.2rem 3rem; }
+
+  /* Hero section cols */
+  .hero-cols { grid-template-columns: 1fr !important; gap: 2rem !important; }
+
+  /* About cols */
+  .about-cols { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .about-hero-cols { grid-template-columns: 1fr !important; }
+
+  /* Service strip grid */
+  .svc-strip-grid { grid-template-columns: 1fr 1fr !important; min-height: auto !important; }
+
+  /* Industry grid */
+  .ind-full-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* Process cols */
+  .process-cols { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
+
+  /* Team grids */
+  .team-core-grid { grid-template-columns: 1fr !important; }
+  .team-adv-grid  { grid-template-columns: 1fr !important; }
+  .team-stats-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* Downloads grid */
+  .dl-grid { grid-template-columns: 1fr !important; }
+
+  /* Downloads strip */
+  .dl-strip { flex-direction: column !important; }
+
+  /* Contrast cols (about page what we are / not) */
+  .contrast-cols { grid-template-columns: 1fr !important; }
+
+  /* Verticals */
+  .vert-cols { grid-template-columns: 1fr !important; }
+
+  /* Iron triangle */
+  .triangle-grid { grid-template-columns: 1fr !important; }
+  .quote-grid    { grid-template-columns: 1fr !important; }
+
+  /* CTA buttons */
+  .hero-ctas { flex-direction: column !important; width: 100% !important; }
+  .hero-ctas a, .hero-ctas button { width: 100% !important; justify-content: center !important; }
+
+  /* Client items */
+  .client-item { padding: 0.65rem 1rem !important; font-size: 0.88rem !important; }
+
+  /* Industry pills */
+  .ind-pill { font-size: 0.8rem !important; padding: 0.5rem 1rem !important; }
+
+  /* Stat boxes */
+  .stat-box { padding: 1.2rem 1rem !important; }
+
+  /* General padding reduction for sections */
+  section { padding-left: 1.2rem !important; padding-right: 1.2rem !important; }
+
+  /* Network page filter */
+  .filter-row { flex-direction: column !important; align-items: flex-start !important; }
+
+  /* Network page reg cols */
+  .reg-cols { flex-direction: column !important; }
+
+  /* Gate grid */
+  .gate-grid { grid-template-columns: 1fr !important; }
+
+  /* Model cards */
+  .model-cols { grid-template-columns: 1fr !important; }
+
+  /* Faq grid */
+  .faq-grid { grid-template-columns: 1fr !important; }
+
+  /* Benefit grid */
+  .benefit-grid { grid-template-columns: 1fr !important; }
+
+  /* Dim grid */
+  .dim-grid { grid-template-columns: 1fr !important; }
+
+  /* Live dashboard */
+  .dash-card-grid   { grid-template-columns: 1fr 1fr !important; }
+  .dash-bottom-grid { grid-template-columns: 1fr !important; }
+  .dash-cta-strip   { flex-direction: column !important; align-items: flex-start !important; }
+  .dash-cta-btns    { flex-wrap: wrap !important; width: 100% !important; }
+
+  /* Navbar */
+  .hide-mobile { display: none !important; }
+}
+
+@media (max-width: 480px) {
+  .svc-strip-grid  { grid-template-columns: 1fr !important; }
+  .ind-full-grid   { grid-template-columns: 1fr !important; }
+  .process-cols    { grid-template-columns: 1fr !important; }
+  .team-stats-grid { grid-template-columns: 1fr !important; }
+  .dash-card-grid  { grid-template-columns: 1fr !important; }
+
+  /* Reduce font on hero */
+  h1 { font-size: clamp(1.8rem, 8vw, 2.8rem) !important; }
+  h2 { font-size: clamp(1.4rem, 6vw, 2rem) !important; }
+
+  /* Full-width buttons */
+  .btn-primary, .btn-outline, .btn-outline-dark {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #001e3c; }
+::-webkit-scrollbar-thumb { background: #006666; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #00AAAA; }
+
+::selection { background: #00AAAA; color: #001e3c; }
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 0.7s ease forwards; }
+.delay-200 { animation-delay: 0.2s; opacity: 0; }
+
+main { padding-top: 72px; }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #00AAAA;
+  outline-offset: 3px;
+}
