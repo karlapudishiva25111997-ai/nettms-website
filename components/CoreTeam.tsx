@@ -170,11 +170,11 @@ export default function CoreTeam({ context = "about" }: { context?: "about" | "e
             initials="KS"
             name="Karlapudi Shiva"
             role="Digital Construction Tools & Training Head"
-            cred="4 Years AEC Platform Development  |  BIM Software & ACC Build Specialist"
-            exp="Shiva bridges the gap between construction workflows and digital technology at NETTMS. With 4 years of hands-on experience building custom platforms for the AEC industry, he develops site QA/QC tools, digital inspection dashboards, project progress trackers, and client-facing reporting portals — purpose-built around how construction teams actually work on site. He also leads BIM software training, ensuring field engineers and project teams can operationalise ACC Build, digital checklists, and model-based workflows from day one of a project."
-            stats={[{ num:"4+", label:"Yrs AEC Dev" },{ num:"ACC", label:"Build Specialist" },{ num:"BIM", label:"Training Lead" }]}
-            skills={["Site QA/QC Tools","ACC Build Integration","BIM Software Training","Digital Dashboards","Inspection Portals","Progress Trackers"]}
-            projects={["NETTMS QA/QC Digital Platform","ACC Build Workflow Deployment","BIM Training Programme — AEC Teams"]}
+            cred="5 Years AEC Platform Development  |  BIM Software & ACC Build Specialist  |  AI Workflow Integration"
+            exp="Shiva bridges the gap between construction workflows and digital technology at NETTMS. With 5 years of hands-on experience building custom platforms for the AEC industry, he develops site QA/QC tools, digital inspection dashboards, project progress trackers, and client-facing reporting portals — purpose-built around how construction teams actually work on site. He also embeds AI into BIM and project delivery workflows — automated QA/QC checks, intelligent clash triage, and AI-assisted documentation — so teams get faster, smarter outputs without changing how they work. He leads BIM software training, ensuring field engineers and project teams can operationalise ACC Build, digital checklists, and model-based workflows from day one of a project."
+            stats={[{ num:"5+", label:"Yrs AEC Dev" },{ num:"ACC", label:"Build Specialist" },{ num:"BIM", label:"Training Lead" }]}
+            skills={["Site QA/QC Tools","ACC Build Integration","AI Workflow Integration","BIM Software Training","Digital Dashboards","Inspection Portals","Progress Trackers"]}
+            projects={["NETTMS QA/QC Digital Platform","ACC Build Workflow Deployment","AI-Integrated BIM Workflows","BIM Training Programme — AEC Teams"]}
             accent="#00AAAA"
           />
         </div>
