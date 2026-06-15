@@ -143,7 +143,7 @@ export default function CoreTeam({ context = "about" }: { context?: "about" | "e
             <span style={{ display:"block", width:"24px", height:"1px", background:"rgba(255,255,255,0.15)" }} />Core Delivery Team
           </p>
         </div>
-        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"1.5rem", marginBottom:"2.5rem" }} className="team-core-grid">
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:"1.5rem", marginBottom:"2.5rem" }} className="team-core-grid">
           <MemberCard
             initials="EK"
             name="Engineer Krishna"
@@ -154,6 +154,17 @@ export default function CoreTeam({ context = "about" }: { context?: "about" | "e
             skills={["Primavera P6","4D/5D BIM","PMO Setup","EVA & Delay Analysis","Project Controls","L&T | AECOM | Parsons"]}
             projects={["Abu Dhabi Midfield Terminal ($4.42B)","Petro Rabigh ($9.4B)","Hyderabad Metro ($2.45B)","King Salman Maritime ($3.1B)"]}
             accent="#00cccc"
+          />
+          <MemberCard
+            initials="JM"
+            name="Jagadish Mandal"
+            role="BIM Manager"
+            cred="CAD / BIM Engineer  |  15+ Years BIM MEP, Architecture & Structure  |  Revit & AutoCAD Specialist — India & Gulf"
+            exp="Jagadish leads BIM modelling and coordination delivery at NETTMS, bringing 15+ years of hands-on Revit and AutoCAD expertise across MEP, Architecture, and Structural disciplines. His career spans India and the Gulf — with delivery on landmark hospitality, banking, transport, and healthcare assets across Dubai, Qatar, and Abu Dhabi. He works fluently in both single and shared Revit environments and owns coordination from concept models through as-built drawings, with deep authoring discipline in parametric families, schedules, and quantity take-offs."
+            stats={[{ num:"15+", label:"Yrs BIM" },{ num:"Gulf+IN", label:"Geographies" },{ num:"MEP/A/S", label:"Full Stack" }]}
+            skills={["Revit MEP","Revit Architecture & Structure","AutoCAD","Shared Coordination","Parametric Families","HVAC Layouts","As-Built Drawings","Quantity Take-Off"]}
+            projects={["Burj Al Arab Hotel, Dubai","Emirates Tower Hotel, Dubai","Al Hilal Bank Tower, Abu Dhabi","Louvre Project, Abu Dhabi","Al Amal Psychiatric Hospital, UAE","Barwa Hotel Tower, Qatar"]}
+            accent="#00AAAA"
           />
           <MemberCard
             initials="KS"
@@ -210,8 +221,10 @@ export default function CoreTeam({ context = "about" }: { context?: "about" | "e
 
       </div>
       <style>{`
-        @media(max-width:900px){
+        @media(max-width:1100px){
           .team-core-grid{grid-template-columns:1fr!important}
+        }
+        @media(max-width:900px){
           .team-adv-grid{grid-template-columns:1fr!important}
           .team-stats-grid{grid-template-columns:1fr 1fr!important}
         }
