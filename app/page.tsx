@@ -94,7 +94,7 @@ export default function HomePage() {
               Digital Certainty.<br/><em style={{color:"#00AAAA",fontStyle:"italic"}}>From Concept to</em><br/>As-Built Handover.
             </h1>
             <p style={{fontSize:"1.05rem",color:"rgba(255,255,255,0.82)",lineHeight:1.88,marginBottom:"2.5rem",fontWeight:300,maxWidth:"540px"}}>
-              NETTMS is India&apos;s structured Digital Construction Management &amp; BIM Delivery Platform — serving global AEC consultants, PMCs, and infrastructure programs with ISO-aligned digital governance.
+              NETTMS is India&apos;s structured Digital Construction Management &amp; BIM Delivery Platform — serving global AEC consultants, PMCs, vendor partners, and infrastructure programs with ISO-aligned digital governance.
             </p>
             <div style={{display:"flex",gap:"1rem",flexWrap:"wrap"}}>
               <Link href="/services" className="btn-primary">Explore Our Services</Link>
